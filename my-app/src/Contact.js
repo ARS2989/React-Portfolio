@@ -4,7 +4,7 @@ function Contact() {
   return (
     <section id="contact">
       <h2>Contact Me</h2>
-      <p>Your contact information...</p>
+      <p>https://github.com/ARS2989</p>
     </section>
   );
 }

@@ -1,38 +1,133 @@
-.App {
+{import 'src/styles.css'};
+
+/* Global Styles */
+body {
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #1f1f1f; /* Slightly darker header background */
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #ffffff; /* White header text color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav li {
+  display: inline;
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a:hover {
+  color: #f35815; /* Accent color on hover */
+}
+
+/* Section Styles */
+section {
+  padding: 40px;
+  border-bottom: 1px solid #333333; /* Separation line between sections */
+}
+
+h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Button Styles */
+button {
+  background-color: #f35815; /* Accent color for buttons */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e44d0c; /* Darker accent color on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Social Media Icons */
+.social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.dark-mode-toggle label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  background-color: #333333; /* Toggle background color */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle label::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff; /* Toggle knob color */
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+/* Dark Mode Active State */
+input[type="checkbox"]:checked + label {
+  background-color: #f35815; /* Accent color when dark mode is active */
+}
+
+input[type="checkbox"]:checked + label::before {
+  transform: translateX(16px);
 }
