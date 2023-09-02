@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { createRoot } from 'react-dom/client';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -16,13 +18,10 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-import { createRoot } from 'react-dom/client';
-
 function NavigationBar() {
   // TODO: Actually implement a navigation bar
   return <h1>Hello from React!</h1>;
 }
 
 const domNode = document.getElementById('navigation');
-const root = createRoot(domNode);
 root.render(<NavigationBar />);
